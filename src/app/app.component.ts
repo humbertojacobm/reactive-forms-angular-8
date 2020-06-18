@@ -26,8 +26,8 @@ export class AppComponent implements OnInit {
       firstName: ['', Validators.required],
       lastName: [''],
       address: this.fb.group({
-        address1: [''],
-        address2: [''],
+        street: [''],
+        city: [''],
         state: [''],
         zip: ['']
       }),
@@ -53,6 +53,15 @@ export class AppComponent implements OnInit {
 
   addAlias(){
     this.aliases.push(this.fb.control(''));
+  }
+
+  updateProfile(){
+    this.form.patchValue({
+      firstName: 'Nancy',
+      address: {
+         street: '123 Drew Street'
+      }
+    })
   }
 
 }
