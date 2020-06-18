@@ -91,4 +91,8 @@ export class AppComponent implements OnInit {
     })
   }
 
+  deleteAlias(value: number){
+    this.aliases.removeAt(value);
+  }
+
 }

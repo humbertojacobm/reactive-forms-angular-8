@@ -48,6 +48,8 @@
       <div *ngFor="let alias of aliases.controls; let i=index">
         <app-alias
           [control]="alias"
+          [index]="i"
+          (deleteAlias)="deleteAlias($event)"
         >
         </app-alias>
       </div>
