@@ -32,14 +32,10 @@ export class AppComponent implements OnInit {
         zip: ['']
       }),
       aliases: this.fb.array([
-        this.fb.control('')
+        this.getNewAliasControl()
       ]),
       cars: this.fb.array([
-        this.fb.group({
-          color: [''],
-          plate: [''],
-          gatesNumer: ['']
-        })
+        this.getNewCardFormGroup()
       ])
     })
 
@@ -54,26 +50,36 @@ export class AppComponent implements OnInit {
     return this.form.value
   }
 
+  //aliases
   get aliases(){
     return this.form.get('aliases') as FormArray;
   }
 
   addAlias(){
-    this.aliases.push(this.fb.control(''));
+    this.aliases.push(this.getNewAliasControl());
   }
 
+  private getNewAliasControl() {
+    return this.fb.control('', Validators.required);
+  }
+
+  //cars
   get cars(){
     return this.form.get('cars') as FormArray;
   }
 
   addCars(){
-    this.cars.push(this.fb.group(
+    this.cars.push(this.getNewCardFormGroup())
+  }
+
+  private getNewCardFormGroup() {
+    return this.fb.group(
       {
         color: [''],
         plate: [''],
         gatesNumer: ['']
       }
-    ))
+    );
   }
 
   updateProfile(){
