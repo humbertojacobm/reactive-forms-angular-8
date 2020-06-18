@@ -1,3 +1,59 @@
 
-    Welcome to {{ title }}!
+  <form [formGroup]="form"
+        (ngSubmit)="onSubmit()"
+  >
+    <label for="">
+      First Name:
+      <input type="text"
+             formControlName="firstName"
+             required
+      >
+    </label>
+    <label for="">
+      Last Name:
+      <input type="text"
+             formControlName="lastName"
+      >
+    </label>
+    <div formGroupName="address">
+      <h3>Address</h3>
+      <label for="">
+        Addres 1:
+        <input type="text"
+               formControlName="address1"
+        >
+      </label>
+      <label for="">
+        Addres 2:
+        <input type="text"
+               formControlName="address2"
+        >
+      </label>
+      <label for="">
+        State:
+        <input type="text"
+               formControlName="state"
+        >
+      </label>
+      <label for="">
+        zip:
+        <input type="text"
+               formControlName="zip"
+        >
+      </label>
+    </div>
+    <div>
+
+    </div>
+    <button
+        type="submit"
+        [disabled]="!form.valid"
+    >
+      Submit
+    </button>
+    <p>
+      Form value: {{formValue | json}}
+      Form status: {{form.status}}
+    </p>
+  </form>
 
