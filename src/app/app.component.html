@@ -44,7 +44,7 @@
     </div>
     <div formArrayName="aliases">
       <h3>Aliases</h3>
-      <button (click)="addAlias()">Add Alias</button>
+      <button (click)="addAlias()" type="button">Add Alias</button>
       <div *ngFor="let alias of aliases.controls; let i=index">
         <label for="">
           Alias:
@@ -53,6 +53,37 @@
                  id=""
                  [formControlName]="i">
         </label>
+      </div>
+    </div>
+    <div formArrayName="cars">
+      <h3>cars</h3>
+      <button (click)="addCars()" type="button">Add cars</button>
+
+      <div *ngFor="let car of cars.controls; let i=index">
+        <div [formGroup]="car">
+          <h4>{{'cars '+i}}</h4>
+          <label for="">
+            Color:
+            <input type="text"
+                   name=""
+                   id=""
+                   formControlName="color">
+          </label>
+          <label for="">
+            plate:
+            <input type="text"
+                   name=""
+                   id=""
+                   formControlName="plate">
+          </label>
+          <label for="">
+            gatesNumer:
+            <input type="text"
+                   name=""
+                   id=""
+                   formControlName="gatesNumer">
+          </label>
+        </div>
       </div>
     </div>
     <button

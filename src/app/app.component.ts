@@ -33,6 +33,13 @@ export class AppComponent implements OnInit {
       }),
       aliases: this.fb.array([
         this.fb.control('')
+      ]),
+      cars: this.fb.array([
+        this.fb.group({
+          color: [''],
+          plate: [''],
+          gatesNumer: ['']
+        })
       ])
     })
 
@@ -53,6 +60,20 @@ export class AppComponent implements OnInit {
 
   addAlias(){
     this.aliases.push(this.fb.control(''));
+  }
+
+  get cars(){
+    return this.form.get('cars') as FormArray;
+  }
+
+  addCars(){
+    this.cars.push(this.fb.group(
+      {
+        color: [''],
+        plate: [''],
+        gatesNumer: ['']
+      }
+    ))
   }
 
   updateProfile(){
