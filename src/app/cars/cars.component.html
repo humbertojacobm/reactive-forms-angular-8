@@ -1,5 +1,5 @@
 <div [formGroup]="group">
-  <h4>{{'cars '+i}}</h4>
+  <h4>{{'cars '+index}}</h4>
   <label for="">
     Color:
     <input type="text"
@@ -26,4 +26,18 @@
   >
     Delete Car
   </button>
+  <div>
+    <h5>Pets</h5>
+    <button type="button"
+            (click)="addPet()"
+    >
+      Add Pet
+    </button>
+    <app-pet
+        *ngFor="let pet of pets.controls; let i=index"
+        [group]="pet"
+    >
+    </app-pet>
+  </div>
+
 </div>

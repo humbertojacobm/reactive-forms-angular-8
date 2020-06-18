@@ -7,13 +7,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AliasComponent } from './alias/alias.component';
 import { CarsComponent } from './cars/cars.component';
 import { PersonComponent } from './person/person.component';
+import { PetComponent } from './pet/pet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AliasComponent,
     CarsComponent,
-    PersonComponent
+    PersonComponent,
+    PetComponent
   ],
   imports: [
     BrowserModule,

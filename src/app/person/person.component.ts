@@ -76,7 +76,10 @@ export class PersonComponent implements OnInit {
       {
         color: [''],
         plate: [''],
-        gatesNumer: ['']
+        gatesNumer: [''],
+        pets: this.fb.array([
+
+        ])
       }
     );
   }
