@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
 
   onSubmit(){
   // TODO Use EventEmitter with form value
-  console.log(this.form.value);
+  console.log('submit',this.form.value);
   }
 
   get formValue(){
