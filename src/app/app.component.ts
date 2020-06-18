@@ -95,4 +95,8 @@ export class AppComponent implements OnInit {
     this.aliases.removeAt(value);
   }
 
+  deleteCar(value: number){
+    this.cars.removeAt(value);
+  }
+
 }

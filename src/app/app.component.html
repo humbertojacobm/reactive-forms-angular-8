@@ -61,6 +61,8 @@
       <div *ngFor="let car of cars.controls; let i=index">
         <app-cars
           [group]="car"
+          [index]="i"
+          (delete) = "deleteCar($event)"
         >
         </app-cars>
 
