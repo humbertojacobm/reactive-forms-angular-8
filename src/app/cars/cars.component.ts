@@ -35,4 +35,8 @@ export class CarsComponent implements OnInit {
     this.pets.push(this.createNewPetFormGroup());
   }
 
+  deletePet(value:number){
+    this.pets.removeAt(value);
+  }
+
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-pet',
@@ -8,10 +9,16 @@ import { FormGroup } from '@angular/forms';
 })
 export class PetComponent implements OnInit {
   @Input('group') group: FormGroup;
+  @Input('index') index: number;
+  @Output('delete') delete: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  deletePet(){
+    this.delete.emit(this.index);
   }
 
 }

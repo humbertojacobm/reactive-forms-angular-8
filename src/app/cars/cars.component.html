@@ -36,6 +36,8 @@
     <app-pet
         *ngFor="let pet of pets.controls; let i=index"
         [group]="pet"
+        [index]="i"
+        (delete)="deletePet($event)"
     >
     </app-pet>
   </div>
