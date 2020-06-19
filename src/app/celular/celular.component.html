@@ -1,0 +1,10 @@
+<!-- <div formArrayName="celulares"> -->
+  <h3>Celulares</h3>
+  <button type="button" (click)="addCell()">Add Cells</button>
+  <app-cel-item *ngFor="let cel of cells.controls; let i = index"
+    [group]="cel"
+    [index]="i"
+    (delete)="deleteCel($event)"
+  >
+  </app-cel-item>
+<!-- </div> -->

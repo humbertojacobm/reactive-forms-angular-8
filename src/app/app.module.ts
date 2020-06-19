@@ -8,6 +8,8 @@ import { AliasComponent } from './alias/alias.component';
 import { CarsComponent } from './cars/cars.component';
 import { PersonComponent } from './person/person.component';
 import { PetComponent } from './pet/pet.component';
+import { CelularComponent } from './celular/celular.component';
+import { CelItemComponent } from './cel-item/cel-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PetComponent } from './pet/pet.component';
     AliasComponent,
     CarsComponent,
     PersonComponent,
-    PetComponent
+    PetComponent,
+    CelularComponent,
+    CelItemComponent
   ],
   imports: [
     BrowserModule,
