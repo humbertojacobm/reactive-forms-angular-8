@@ -12,6 +12,8 @@ import { CelularComponent } from './celular/celular.component';
 import { CelItemComponent } from './cel-item/cel-item.component';
 import { CamContainerComponent } from './cam-container/cam-container.component';
 import { CamDetailComponent } from './cam-detail/cam-detail.component';
+import { PhotosContainerComponent } from './photos-container/photos-container.component';
+import { PhotoItemComponent } from './photo-item/photo-item.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CamDetailComponent } from './cam-detail/cam-detail.component';
     CelularComponent,
     CelItemComponent,
     CamContainerComponent,
-    CamDetailComponent
+    CamDetailComponent,
+    PhotosContainerComponent,
+    PhotoItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<h3>Fotos</h3>
+<button type="button" (click)="add()">Add Photo</button>
+<ng-container *ngIf="photos">
+  <app-photo-item
+    *ngFor="let photos of photos.controls; let i=index"
+    [form-group]="photos"
+    [index]="i"
+    (delete)="deletePhoto($event)"
+  >
+  </app-photo-item>
+</ng-container>
+<br>
