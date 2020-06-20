@@ -1,0 +1,11 @@
+<h3>Cams</h3>
+<button type="button" (click)="add()">Add Cam</button>
+<ng-container *ngIf="cams">
+  <app-cam-detail
+    *ngFor="let cam of cams.controls; let i=index"
+    [group]="cam"
+    [index]="i"
+    (delete)="delete($event)"
+  >
+  </app-cam-detail>
+</ng-container>

@@ -1,12 +1,22 @@
 <div [formGroup]="group">
-  <h3>Celular {{index}}</h3>
-  <label for="">
-    supplier:
-    <input type="text" name="" id="" formControlName="suppliers">
-  </label>
-  <label for="">
-    supplier:
-    <input type="text" name="" id="" formControlName="number">
-  </label>
-  <button type="button" (click)="deleteCel()">Delete Cel</button>
+  <div>
+    <h3>Celular {{index}}</h3>
+    <label for="">
+      supplier:
+      <input type="text" name="" id="" formControlName="suppliers">
+    </label>
+    <label for="">
+      supplier:
+      <input type="text" name="" id="" formControlName="number">
+    </label>
+    <button type="button" (click)="deleteCel()">Delete Cel</button>
+  </div>
+  <div>
+    <app-cam-container
+       *ngIf="group"
+       [form_Group]="group"
+    >
+    </app-cam-container>
+  </div>
+
 </div>

@@ -10,6 +10,8 @@ import { PersonComponent } from './person/person.component';
 import { PetComponent } from './pet/pet.component';
 import { CelularComponent } from './celular/celular.component';
 import { CelItemComponent } from './cel-item/cel-item.component';
+import { CamContainerComponent } from './cam-container/cam-container.component';
+import { CamDetailComponent } from './cam-detail/cam-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CelItemComponent } from './cel-item/cel-item.component';
     PersonComponent,
     PetComponent,
     CelularComponent,
-    CelItemComponent
+    CelItemComponent,
+    CamContainerComponent,
+    CamDetailComponent
   ],
   imports: [
     BrowserModule,
