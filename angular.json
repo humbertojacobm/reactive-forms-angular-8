@@ -56,6 +56,14 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           }
         },
@@ -67,8 +75,12 @@
           "configurations": {
             "production": {
               "browserTarget": "reactive-forms:build:production"
+            },
+            "development": {
+              "browserTarget": "reactive-forms:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
