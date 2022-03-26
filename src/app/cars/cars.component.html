@@ -1,0 +1,45 @@
+<div [formGroup]="group">
+  <h4>{{'cars '+index}}</h4>
+  <label for="">
+    Color:
+    <input type="text"
+           name=""
+           id=""
+           formControlName="color">
+  </label>
+  <label for="">
+    plate:
+    <input type="text"
+           name=""
+           id=""
+           formControlName="plate">
+  </label>
+  <label for="">
+    gatesNumer:
+    <input type="text"
+           name=""
+           id=""
+           formControlName="gatesNumer">
+  </label>
+  <button type="button"
+          (click)="delete()"
+  >
+    Delete Car
+  </button>
+  <div>
+    <h5>Pets</h5>
+    <button type="button"
+            (click)="addPet()"
+    >
+      Add Pet
+    </button>
+    <app-pet
+        *ngFor="let pet of pets.controls; let i=index"
+        [group]="pet"
+        [index]="i"
+        (delete)="deletePet($event)"
+    >
+    </app-pet>
+  </div>
+
+</div>

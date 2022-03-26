@@ -1,0 +1,19 @@
+<div [formGroup]="group">
+  <div>
+    <label for="">
+      Pixels:
+      <input type="text" name="" id="" formControlName="pixel">
+    </label>
+    <label for="">
+      Focus:
+      <input type="text" name="" id="" formControlName="focus">
+    </label>
+    <button type="button" (click)="deleteCam()">Delete Cam</button>
+  </div>
+  <div>
+    <app-photos
+       [form-group]="group"
+    >
+    </app-photos>
+  </div>
+</div>
